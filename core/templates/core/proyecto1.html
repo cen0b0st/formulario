@@ -1,0 +1,43 @@
+{% extends "core/base2.html" %}
+
+{% block title %}
+  documento bursatil
+{% endblock title %}
+
+{% block header %}
+<style></style>
+  <h1>Creacion documento petunio</h1>
+{% endblock header %}
+
+{% block content %}
+
+<form method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="" class="form-label">Titulo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby=""
+      {{ form.title }}
+      
+    
+    <div id="emailHelp" class="form-text">
+      
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Descripcion</label>
+    <input type="text" class="form-control"  {{ form.content }} 
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
+
+<br>
+<br>
+
+
+<a href="{% url 'core:home' %}" type="button" class="btn btn-success">Volver</a>
+{% endblock content %}

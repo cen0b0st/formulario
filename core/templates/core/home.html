@@ -1,0 +1,32 @@
+{% extends "core/base.html" %} {% load static %} {% block content %}
+<!-- <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+<h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
+<a class="btn btn-primary" href="#about">Get Started</a> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Proyectos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!-- <th scope="row">1</th> -->
+      <td>
+        <a href="{% url 'core:uno' %}" type="button" class="btn btn-primary">Proyecto 1</a>
+      </td>
+    </tr>
+    <tr>
+      <!-- <th scope="row">2</th> -->
+      <td>
+        <a href="#" type="button" class="btn btn-secondary">Proyecto 3</a>
+      </td>
+    </tr>
+    <tr>
+      <!-- <th scope="row">3</th> -->
+      <td>
+        <a href="#" type="button" class="btn btn-success">Proyecto 3</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock content %}
